@@ -32,18 +32,18 @@ const Hero = () => {
             {/* Trust Line with Google Rating - Centered */}
             <div className="flex flex-col items-center space-y-2">
               <div className="flex items-center space-x-1">
-                <span className="font-bold text-[#2B243F] text-base drop-shadow-sm">4.9</span>
+                <span className="font-bold text-[#2B243F] text-lg drop-shadow-sm">4.9</span>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i} 
-                      className={`w-3.5 h-3.5 ${i < 5 ? 'text-[#FF859F] fill-[#FF859F]' : 'text-gray-300'}`}
+                      className={`w-4 h-4 ${i < 5 ? 'text-[#F5A623] fill-[#F5A623]' : 'text-gray-300'}`}
                     />
                   ))}
                 </div>
-                <span className="text-xs text-[#2B243F] font-semibold drop-shadow-sm">(Google Rating)</span>
+                <span className="text-sm text-[#2B243F] font-bold drop-shadow-sm">(Google Rating)</span>
               </div>
-              <p className="text-xs font-bold text-[#2B243F] drop-shadow-sm">
+              <p className="text-sm font-bold text-[#2B243F] drop-shadow-sm">
                 Trusted by hundreds of happy customers
               </p>
             </div>
