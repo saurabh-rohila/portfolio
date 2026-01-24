@@ -39,17 +39,9 @@ const Header = () => {
     >
       <div className="container-custom px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <Logo className="w-16 h-16" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-[#2B243F]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Gooey Mooey
-              </span>
-              <span className="text-xs text-[#7662B2]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                Love at First Bite
-              </span>
-            </div>
+          {/* Logo - Full brand logo as per guidelines */}
+          <div className="flex items-center">
+            <Logo className="h-16 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
