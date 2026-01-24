@@ -5,17 +5,16 @@ import { Star, Sparkles, Award, Package } from 'lucide-react';
 const Hero = () => {
   const navigate = useNavigate();
 
+  const heroImageUrl = "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/jxuf4jet_PVP11747%20%281%29.png";
+
   return (
     <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center">
       {/* Background image */}
-      <div 
-        className="absolute inset-0 -z-20"
-        style={{
-          backgroundImage: `url('https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/jxuf4jet_PVP11747%20%281%29.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+      <img
+        src={heroImageUrl}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+        loading="lazy"
       />
       
       {/* Semi-transparent lavender overlay for text readability */}
