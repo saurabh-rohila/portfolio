@@ -131,11 +131,11 @@ const MenuPage = () => {
             </Accordion>
 
             <div className="text-center mt-8 space-y-5">
-              <div className="bg-gradient-to-r from-[#FFB8CB]/20 to-[#FF859F]/20 rounded-xl p-6 border-2 border-dashed border-[#FF859F]">
-                <p className="text-[#2B243F] font-semibold text-lg mb-2">
+              <div className="bg-gradient-to-r from-[#E1CAFF]/30 to-[#C0C2FD]/30 rounded-xl p-5 border-2 border-dashed border-[#7662B2]">
+                <p className="text-[#7662B2] font-semibold text-base mb-1">
                   Note: Flavours, designs and packaging can be customized.
                 </p>
-                <p className="text-[#2B243F]/70 text-sm">Tell us your vision and we'll bring it to life!</p>
+                <p className="text-[#7662B2]/70 text-sm">Tell us your vision and we'll bring it to life!</p>
               </div>
             </div>
           </div>
