@@ -16,9 +16,6 @@ const About = () => {
               <p>
                 We specialize in custom celebration cakes, gourmet desserts and gifting solutions that not only taste exceptional but look stunning too.
               </p>
-              <p>
-                Whether it's a birthday, anniversary, festive celebration or corporate event — Gooey Mooey makes every occasion sweeter.
-              </p>
             </div>
           </div>
         </div>
