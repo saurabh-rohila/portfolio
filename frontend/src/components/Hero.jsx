@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center"
+      className="relative pt-20 pb-4 md:pt-24 md:pb-6 overflow-hidden min-h-[75vh] flex items-center"
       style={{
         backgroundImage: `linear-gradient(rgba(225, 202, 255, 0.70), rgba(225, 202, 255, 0.70)), url("/hero-bg-optimized.jpg")`,
         backgroundSize: 'cover',
