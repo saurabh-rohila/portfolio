@@ -8,7 +8,7 @@ const FeaturedPreview = () => {
   const products = [
     { name: 'Celebration Cakes', icon: Cake },
     { name: 'Bento Cakes', icon: Gift },
-    { name: 'Cupcakes', icon: Cupcake },
+    { name: 'Cupcakes', icon: CircleDot },
     { name: 'Cookies', icon: Cookie },
     { name: 'Brownies', icon: PartyPopper },
     { name: 'Cheesecake Jars', icon: IceCream },
