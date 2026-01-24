@@ -40,8 +40,24 @@ const Header = () => {
       <div className="container-custom px-6 md:px-12">
         <div className="flex items-center justify-between py-4">
           {/* Logo - Full brand logo as per guidelines */}
-          <div className="flex items-center">
-            <Logo className="h-20 md:h-24 w-auto" />
+          <div className="flex items-center space-x-3">
+            <Logo className="h-16 md:h-20 lg:h-24 w-auto" />
+            
+            {/* Brand Text for Mobile/Tablet - visible on smaller screens */}
+            <div className="flex flex-col lg:hidden">
+              <span 
+                className="text-base md:text-lg font-bold text-[#2B243F]" 
+                style={{ fontFamily: 'Playfair Display, serif' }}
+              >
+                Gooey Mooey
+              </span>
+              <span 
+                className="text-xs text-[#7662B2] italic" 
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Love at First Bite
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -71,7 +87,7 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 text-[#2B243F] hover:text-[#7662B2] transition-colors"
+            className="lg:hidden p-2 text-[#2B243F] hover:text-[#7662B2] transition-colors flex-shrink-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
