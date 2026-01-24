@@ -25,13 +25,13 @@ const Footer = () => {
   return (
     <footer className="bg-[#2B243F] text-white">
       <div className="container-custom px-3 md:px-6 py-5">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Brand */}
-          <div className="lg:col-span-2 space-y-2">
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Left Column - Brand + Social */}
+          <div className="space-y-3">
             <div className="flex items-center">
               <Logo className="h-16 w-auto" />
             </div>
-            <p className="text-white/70 leading-relaxed max-w-md text-xs">
+            <p className="text-white/70 leading-relaxed text-xs">
               Premium handcrafted cakes and desserts made with passion. Serving the sweetest moments in Gurugram since day one.
             </p>
             <div className="flex space-x-2">
@@ -56,49 +56,52 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-bold mb-2">Quick Links</h4>
-            <ul className="space-y-1">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-white/70 hover:text-[#E1CAFF] transition-colors text-xs"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Right Column - Links + Contact */}
+          <div className="grid grid-cols-2 gap-4">
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-sm font-bold mb-2">Quick Links</h4>
+              <ul className="space-y-1">
+                {quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-white/70 hover:text-[#E1CAFF] transition-colors text-xs"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-sm font-bold mb-2">Get in Touch</h4>
-            <ul className="space-y-1 text-white/70 text-xs">
-              <li>
-                <span className="block font-semibold text-white mb-0.5">WhatsApp</span>
-                <a href="https://wa.me/919266987600" className="hover:text-[#E1CAFF] transition-colors">
-                  +91 92669 87600
-                </a>
-              </li>
-              <li>
-                <span className="block font-semibold text-white mb-0.5">Instagram</span>
-                <a
-                  href="https://www.instagram.com/gooeymooey.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#E1CAFF] transition-colors"
-                >
-                  @gooeymooey.in
-                </a>
-              </li>
-              <li>
-                <span className="block font-semibold text-white mb-0.5">Location</span>
-                <span>Gurugram, India</span>
-              </li>
-            </ul>
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-sm font-bold mb-2">Get in Touch</h4>
+              <ul className="space-y-1 text-white/70 text-xs">
+                <li>
+                  <span className="block font-semibold text-white mb-0.5">WhatsApp</span>
+                  <a href="https://wa.me/919266987600" className="hover:text-[#E1CAFF] transition-colors">
+                    +91 92669 87600
+                  </a>
+                </li>
+                <li>
+                  <span className="block font-semibold text-white mb-0.5">Instagram</span>
+                  <a
+                    href="https://www.instagram.com/gooeymooey.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#E1CAFF] transition-colors"
+                  >
+                    @gooeymooey.in
+                  </a>
+                </li>
+                <li>
+                  <span className="block font-semibold text-white mb-0.5">Location</span>
+                  <span>Gurugram, India</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

@@ -52,25 +52,25 @@ const Header = () => {
       }`}
     >
       <div className="container-custom px-3 md:px-6">
-        <div className="flex items-center justify-between py-2.5">
-          {/* Logo with Brand Text */}
+        <div className="flex items-center justify-between py-1.5">
+          {/* Logo with Brand Text - 90% of header height */}
           <div 
-            className="flex items-center space-x-2.5 cursor-pointer flex-1" 
+            className="flex items-center space-x-2 cursor-pointer flex-1" 
             onClick={() => navigate('/')}
           >
             {/* Logo - 90% of header height */}
-            <Logo className="h-16 md:h-20 lg:h-24 w-auto flex-shrink-0" />
+            <Logo className="h-20 md:h-24 lg:h-28 w-auto flex-shrink-0" />
             
-            {/* Brand Text - Two Lines with 3:2 ratio */}
+            {/* Brand Text - Two Lines with larger size */}
             <div className="flex flex-col lg:hidden">
               <span 
-                className="text-lg md:text-xl font-bold text-[#2B243F] leading-tight" 
+                className="text-xl md:text-2xl font-bold text-[#2B243F] leading-tight" 
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 Gooey Mooey
               </span>
               <span 
-                className="text-xs md:text-sm text-[#7662B2] italic leading-tight" 
+                className="text-sm md:text-base text-[#7662B2] italic leading-tight" 
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Love at First Bite
@@ -112,7 +112,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
