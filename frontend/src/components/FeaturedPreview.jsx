@@ -7,11 +7,11 @@ const FeaturedPreview = () => {
 
   const products = [
     { name: 'Celebration Cakes', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/vukwd16d_WhatsApp%20Image%202026-01-24%20at%208.45.31%20PM.jpeg' },
-    { name: 'Bento Cakes', image: null },
+    { name: 'Bento Cakes', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/xdkmg9n2_WhatsApp%20Image%202026-01-24%20at%208.48.18%20PM.jpeg' },
     { name: 'Cupcakes', image: null },
     { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
-    { name: 'Brownies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/pcvd41p5_PVP11741.jpg' },
-    { name: 'Cheesecake Jars', image: null },
+    { name: 'Dessert Jars', image: null },
+    { name: 'Cheesecake', image: null },
   ];
 
   return (
