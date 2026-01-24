@@ -44,7 +44,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons - 25% smaller */}
-            <div className="flex flex-col sm:flex-row gap-2 pt-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <a
                 href="https://wa.me/919266987600"
                 target="_blank"
@@ -61,11 +61,6 @@ const Hero = () => {
                 <span>View Menu & Prices</span>
               </button>
             </div>
-
-            {/* Microcopy */}
-            <p className="text-xs text-[#7662B2] font-medium">
-              Fast response • Custom designs accepted
-            </p>
           </div>
 
           {/* Right Column - 3 Photo Boxes */}
