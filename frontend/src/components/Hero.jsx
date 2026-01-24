@@ -9,14 +9,17 @@ const Hero = () => {
     <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center -z-20"
+        className="absolute inset-0 -z-20"
         style={{
-          backgroundImage: `url('https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/jxuf4jet_PVP11747%20%281%29.png')`
+          backgroundImage: `url('https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/jxuf4jet_PVP11747%20%281%29.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       
       {/* Semi-transparent lavender overlay for text readability */}
-      <div className="absolute inset-0 bg-[#E1CAFF]/75 -z-10" />
+      <div className="absolute inset-0 bg-[#E1CAFF]/50 -z-10" />
 
       <div className="container-custom px-3 md:px-6">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
