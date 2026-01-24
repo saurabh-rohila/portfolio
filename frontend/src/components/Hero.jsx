@@ -6,7 +6,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="home" className="relative pt-20 pb-5 md:pt-24 md:pb-8 overflow-hidden">
+    <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#E1CAFF]/30 via-white to-[#C0C2FD]/20 -z-10" />
       <div className="absolute top-20 right-10 w-64 h-64 bg-[#FFB8CB]/10 rounded-full blur-3xl -z-10" />
@@ -16,13 +16,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-5 items-center">
           {/* Left Column - Content */}
           <div className="space-y-3 animate-fade-in-up">
-            <div className="inline-flex items-center space-x-2 bg-[#E1CAFF]/30 px-2.5 py-1 rounded-full">
-              <Star className="w-3.5 h-3.5 text-[#FF859F] fill-[#FF859F]" />
-              <span className="text-xs font-semibold text-[#2B243F]">Premium Bakery in Gurugram</span>
-            </div>
-
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2B243F] leading-tight">
-              Premium Custom Cakes & Desserts in Gurugram
+              Premium Custom Cakes & Desserts in Delhi NCR
             </h1>
 
             <p className="text-sm md:text-base text-[#2B243F]/80 leading-relaxed">
@@ -36,23 +31,23 @@ const Hero = () => {
                   <Star key={i} className="w-3.5 h-3.5 text-[#FF859F] fill-[#FF859F]" />
                 ))}
               </div>
-              <span className="font-semibold text-xs">Trusted by hundreds of happy customers in Gurugram</span>
+              <span className="font-semibold text-xs">Trusted by hundreds of happy customers in Delhi NCR</span>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-2.5 pt-2">
+            {/* CTA Buttons - 25% smaller */}
+            <div className="flex flex-col sm:flex-row gap-2 pt-2">
               <a
                 href="https://wa.me/919266987600"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center space-x-2 text-sm px-5 py-2.5"
+                className="bg-[#7662B2] text-white px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:bg-[#5f4e94] hover:shadow-lg hover:scale-105 active:scale-95 inline-flex items-center justify-center space-x-1.5 text-xs"
               >
                 <span>Order on WhatsApp</span>
                 <span className="text-xs">(Instant Reply)</span>
               </a>
               <button
                 onClick={() => navigate('/menu')}
-                className="btn-secondary inline-flex items-center justify-center space-x-2 text-sm px-5 py-2.5"
+                className="bg-white text-[#7662B2] border-2 border-[#7662B2] px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:bg-[#7662B2] hover:text-white hover:shadow-lg hover:scale-105 active:scale-95 inline-flex items-center justify-center space-x-1.5 text-xs"
               >
                 <span>View Menu & Prices</span>
               </button>
@@ -64,25 +59,31 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Right Column - Hero Image Placeholder - 50% smaller */}
-          <div className="relative">
-            <div className="product-placeholder h-[140px] md:h-[180px] rounded-xl shadow-lg animate-float">
-              <div className="flex flex-col items-center justify-center space-y-2 p-4">
-                <Sparkles className="w-8 h-8 text-[#7662B2]" />
-                <p className="text-center text-[#7662B2] font-semibold text-xs">
-                  Premium Bakery Photography
-                  <br />
-                  <span className="text-xs font-normal">(Add photos here)</span>
-                </p>
+          {/* Right Column - 3 Photo Boxes */}
+          <div className="grid grid-cols-3 gap-2">
+            {[1, 2, 3].map((num) => (
+              <div key={num} className="relative">
+                <div className="product-placeholder h-[120px] md:h-[150px] rounded-lg shadow-lg">
+                  <div className="flex flex-col items-center justify-center h-full p-2">
+                    <Sparkles className="w-6 h-6 text-[#7662B2] mb-1" />
+                    <p className="text-center text-[#7662B2] font-semibold text-xs">
+                      Photo {num}
+                    </p>
+                  </div>
+                </div>
+                {/* Small decorative badge */}
+                {num === 1 && (
+                  <div className="absolute -top-1 -right-1 bg-[#FF859F] rounded-full p-1 shadow-md">
+                    <Award className="w-3 h-3 text-white" />
+                  </div>
+                )}
+                {num === 3 && (
+                  <div className="absolute -bottom-1 -left-1 bg-[#7662B2] rounded-full p-1 shadow-md">
+                    <Package className="w-3 h-3 text-white" />
+                  </div>
+                )}
               </div>
-            </div>
-            {/* Decorative elements - smaller */}
-            <div className="absolute -top-2 -right-2 bg-[#FF859F] rounded-full p-2 shadow-lg">
-              <Award className="w-4 h-4 text-white" />
-            </div>
-            <div className="absolute -bottom-2 -left-2 bg-[#7662B2] rounded-full p-2 shadow-lg">
-              <Package className="w-4 h-4 text-white" />
-            </div>
+            ))}
           </div>
         </div>
       </div>

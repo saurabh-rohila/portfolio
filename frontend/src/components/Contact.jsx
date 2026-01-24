@@ -2,6 +2,14 @@ import React from 'react';
 import { MessageCircle, Instagram, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
+  const orderFields = [
+    { label: 'Occasion', icon: '🎉' },
+    { label: 'Date', icon: '📅' },
+    { label: 'Servings', icon: '👥' },
+    { label: 'Flavour', icon: '🍰' },
+    { label: 'Design', icon: '🎨' },
+  ];
+
   return (
     <section id="contact" className="py-5 md:py-7 bg-gradient-to-br from-[#2B243F] to-[#7662B2] text-white">
       <div className="container-custom px-3 md:px-6">
@@ -78,28 +86,22 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right - What to Share */}
+          {/* Right - What to Share - Grid View like reviews */}
           <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] rounded-lg p-3 text-[#2B243F]">
-            <h3 className="text-base font-bold mb-3">What to Share When Ordering</h3>
+            <h3 className="text-base font-bold mb-3 text-center">What to Share When Ordering</h3>
 
-            <div className="space-y-2">
-              {[
-                { label: 'Occasion', example: 'Birthday, Anniversary, Corporate Event, etc.' },
-                { label: 'Date Required', example: 'When do you need the order?' },
-                { label: 'Servings', example: 'How many people?' },
-                { label: 'Flavour Preference', example: 'Chocolate, Vanilla, Red Velvet, etc.' },
-                { label: 'Custom Design', example: 'Share your theme or inspiration' },
-              ].map((field, index) => (
-                <div key={index} className="bg-white/50 rounded-lg p-2">
-                  <p className="font-semibold mb-0.5 text-xs">{field.label}</p>
-                  <p className="text-xs text-[#2B243F]/70">{field.example}</p>
+            <div className="grid grid-cols-2 gap-2">
+              {orderFields.map((field, index) => (
+                <div key={index} className="bg-white/70 rounded-lg p-2.5 text-center hover:bg-white transition-colors">
+                  <div className="text-xl mb-1">{field.icon}</div>
+                  <p className="font-semibold text-xs">{field.label}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-3 p-2 bg-[#7662B2]/20 rounded-lg border-2 border-dashed border-[#7662B2]">
               <p className="text-center font-semibold text-xs">
-                Don't worry if you're unsure! Our team will guide you through every detail. 💜
+                Don't worry if you're unsure! Our team will guide you. 💜
               </p>
             </div>
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Cake, Cookie, Cupcake, Gift, IceCream, PartyPopper } from 'lucide-react';
 
 const FeaturedPreview = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: 'Celebration Cakes' },
-    { name: 'Bento Cakes' },
-    { name: 'Cupcakes' },
-    { name: 'Cookies' },
-    { name: 'Brownies' },
-    { name: 'Cheesecake Jars' },
+    { name: 'Celebration Cakes', icon: Cake },
+    { name: 'Bento Cakes', icon: Gift },
+    { name: 'Cupcakes', icon: Cupcake },
+    { name: 'Cookies', icon: Cookie },
+    { name: 'Brownies', icon: PartyPopper },
+    { name: 'Cheesecake Jars', icon: IceCream },
   ];
 
   return (
@@ -20,42 +20,33 @@ const FeaturedPreview = () => {
         <div className="text-center mb-4">
           <h2 className="text-xl md:text-2xl font-bold text-[#2B243F] mb-2">Our Sweet Collection</h2>
           <p className="text-sm text-[#2B243F]/70 max-w-2xl mx-auto">
-            Preview our delicious range - click to view full menu with prices
+            Click any item to view full menu with prices
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {/* List View */}
+        <div className="max-w-2xl mx-auto space-y-2">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
               onClick={() => navigate('/menu')}
+              className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-102 group"
             >
-              {/* Image Placeholder */}
-              <div className="product-placeholder h-40 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-[#7662B2] font-semibold text-center px-3 text-sm">
-                    {product.name}
-                    <br />
-                    <span className="text-xs font-normal">(Product photo)</span>
-                  </p>
-                </div>
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2B243F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Icon placeholder for photo */}
+              <div className="product-placeholder w-16 h-16 rounded-lg flex-shrink-0 flex items-center justify-center">
+                <product.icon className="w-6 h-6 text-[#7662B2]" />
               </div>
-
+              
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-2.5 bg-white transform translate-y-0 transition-transform duration-500">
-                <h3 className="text-sm font-bold text-[#2B243F] mb-1.5">
+              <div className="flex-1">
+                <h3 className="text-sm font-bold text-[#2B243F] mb-0.5">
                   {product.name}
                 </h3>
-                <button
-                  className="inline-flex items-center space-x-1.5 text-[#7662B2] font-semibold hover:text-[#FF859F] transition-colors group-hover:translate-x-2 transform duration-300 text-xs"
-                >
-                  <span>View on Menu Page</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
+                <p className="text-xs text-[#2B243F]/60">(Add product photo)</p>
               </div>
+              
+              {/* Arrow */}
+              <ArrowRight className="w-4 h-4 text-[#7662B2] group-hover:text-[#FF859F] group-hover:translate-x-1 transition-all" />
             </div>
           ))}
         </div>
@@ -63,7 +54,7 @@ const FeaturedPreview = () => {
         <div className="text-center mt-4">
           <button
             onClick={() => navigate('/menu')}
-            className="btn-primary inline-block text-sm px-5 py-2.5"
+            className="bg-[#7662B2] text-white px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:bg-[#5f4e94] hover:shadow-lg hover:scale-105 active:scale-95 text-xs"
           >
             View Full Menu & Prices
           </button>
