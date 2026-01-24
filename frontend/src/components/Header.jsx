@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, MapPin } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 const Header = () => {
@@ -52,30 +52,29 @@ const Header = () => {
       }`}
     >
       <div className="container-custom px-3 md:px-6">
-        <div className="flex items-center justify-between py-2">
-          {/* Logo */}
+        <div className="flex items-center justify-between py-2.5">
+          {/* Logo with Brand Text */}
           <div 
-            className="flex flex-col cursor-pointer flex-1" 
+            className="flex items-center space-x-2.5 cursor-pointer flex-1" 
             onClick={() => navigate('/')}
           >
-            <div className="flex items-center space-x-2">
-              <Logo className="h-12 md:h-16 lg:h-20 w-auto flex-shrink-0" />
-              
-              {/* Brand Text - Single Line */}
-              <div className="lg:hidden flex-1 min-w-0">
-                <span 
-                  className="text-sm md:text-base font-bold text-[#2B243F] block" 
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  Gooey Mooey <span className="text-[#7662B2] text-xs md:text-sm font-normal italic">: Love at First Bite</span>
-                </span>
-              </div>
-            </div>
+            {/* Logo - 90% of header height */}
+            <Logo className="h-16 md:h-20 lg:h-24 w-auto flex-shrink-0" />
             
-            {/* Location Tag */}
-            <div className="lg:hidden flex items-center space-x-1 mt-0.5 ml-14">
-              <MapPin className="w-3 h-3 text-[#FF859F]" />
-              <span className="text-xs font-semibold text-[#2B243F]">Premium Bakery in Gurugram</span>
+            {/* Brand Text - Two Lines with 3:2 ratio */}
+            <div className="flex flex-col lg:hidden">
+              <span 
+                className="text-lg md:text-xl font-bold text-[#2B243F] leading-tight" 
+                style={{ fontFamily: 'Playfair Display, serif' }}
+              >
+                Gooey Mooey
+              </span>
+              <span 
+                className="text-xs md:text-sm text-[#7662B2] italic leading-tight" 
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Love at First Bite
+              </span>
             </div>
           </div>
 
