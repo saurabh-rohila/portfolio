@@ -51,22 +51,22 @@ const Header = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="container-custom px-4 md:px-6">
-        <div className="flex items-center justify-between py-3">
+      <div className="container-custom px-3 md:px-6">
+        <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <div 
             className="flex items-center space-x-2 cursor-pointer flex-1" 
             onClick={() => navigate('/')}
           >
-            <Logo className="h-14 md:h-16 lg:h-20 w-auto flex-shrink-0" />
+            <Logo className="h-12 md:h-16 lg:h-20 w-auto flex-shrink-0" />
             
             {/* Brand Text - Single Line - Larger on mobile */}
             <div className="lg:hidden flex-1 min-w-0">
               <span 
-                className="text-base md:text-lg font-bold text-[#2B243F] block" 
+                className="text-sm md:text-base font-bold text-[#2B243F] block" 
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Gooey Mooey <span className="text-[#7662B2] text-sm md:text-base font-normal italic whitespace-nowrap">: Love at First Bite</span>
+                Gooey Mooey <span className="text-[#7662B2] text-xs md:text-sm font-normal italic whitespace-nowrap">: Love at First Bite</span>
               </span>
             </div>
           </div>
@@ -101,11 +101,11 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 text-[#2B243F] hover:text-[#7662B2] transition-colors flex-shrink-0"
+            className="lg:hidden p-1.5 text-[#2B243F] hover:text-[#7662B2] transition-colors flex-shrink-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -113,7 +113,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-[#E1CAFF] shadow-lg">
-          <nav className="flex flex-col px-4 py-3 space-y-3">
+          <nav className="flex flex-col px-3 py-2 space-y-2">
             {menuItems.map((item) => (
               <button
                 key={item.label}
