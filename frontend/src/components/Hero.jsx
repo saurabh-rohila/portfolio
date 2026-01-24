@@ -10,7 +10,7 @@ const Hero = () => {
       id="home" 
       className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(225, 202, 255, 0.65), rgba(225, 202, 255, 0.65)), url("/hero-bg-optimized.jpg")`,
+        backgroundImage: `linear-gradient(rgba(225, 202, 255, 0.45), rgba(225, 202, 255, 0.45)), url("/hero-bg-optimized.jpg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -20,19 +20,19 @@ const Hero = () => {
       <div className="container-custom px-3 md:px-6">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
           {/* Left Column - Content - All Centered */}
-          <div className="space-y-3 animate-fade-in-up text-center bg-white/60 backdrop-blur-sm rounded-2xl p-4 md:p-6">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2B243F] leading-tight">
+          <div className="space-y-3 animate-fade-in-up text-center">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2B243F] leading-tight drop-shadow-sm">
               Premium Custom Cakes & Desserts in Delhi NCR
             </h1>
 
-            <p className="text-sm md:text-base text-[#2B243F] leading-relaxed font-medium">
+            <p className="text-sm md:text-base text-[#2B243F] leading-relaxed font-semibold drop-shadow-sm">
               Freshly baked, beautifully designed cakes and desserts for birthdays, celebrations, gifting & corporate orders.
             </p>
 
             {/* Trust Line with Google Rating - Centered */}
-            <div className="flex flex-col items-center space-y-2 text-[#2B243F]">
+            <div className="flex flex-col items-center space-y-2">
               <div className="flex items-center space-x-1">
-                <span className="font-bold text-[#2B243F] text-base">4.9</span>
+                <span className="font-bold text-[#2B243F] text-base drop-shadow-sm">4.9</span>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star 
@@ -41,9 +41,9 @@ const Hero = () => {
                     />
                   ))}
                 </div>
-                <span className="text-xs text-[#2B243F] font-medium">(Google Rating)</span>
+                <span className="text-xs text-[#2B243F] font-semibold drop-shadow-sm">(Google Rating)</span>
               </div>
-              <p className="text-xs font-semibold text-[#2B243F]">
+              <p className="text-xs font-bold text-[#2B243F] drop-shadow-sm">
                 Trusted by hundreds of happy customers
               </p>
             </div>
