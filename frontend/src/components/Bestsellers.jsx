@@ -3,12 +3,11 @@ import { Star, TrendingUp } from 'lucide-react';
 
 const Bestsellers = () => {
   const bestsellers = [
-    { name: 'Chocolate Truffle Cake', badge: 'Most Popular' },
-    { name: 'Red Velvet Cake', badge: 'Customer Favorite' },
-    { name: 'Bento Birthday Cake', badge: 'Trending' },
-    { name: 'Fudgy Brownie Box', badge: 'Best Value' },
-    { name: 'Lotus Cheesecake Jar', badge: 'Signature' },
-    { name: 'Custom Theme Cookies', badge: 'Perfect Gift' },
+    { name: 'Chocolate Truffle Cake' },
+    { name: 'Red Velvet Cake' },
+    { name: 'Bento Birthday Cake' },
+    { name: 'Fudgy Brownie Box' },
+    { name: 'Lotus Cheesecake Jar' },
   ];
 
   return (
@@ -25,17 +24,12 @@ const Bestsellers = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {bestsellers.map((item, index) => (
             <div
               key={index}
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105"
             >
-              {/* Badge */}
-              <div className="absolute top-4 right-4 z-10 bg-[#FF859F] text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                {item.badge}
-              </div>
-
               {/* Image Placeholder */}
               <div className="product-placeholder h-56 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -57,25 +51,11 @@ const Bestsellers = () => {
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center block"
                 >
-                  Order Now on WhatsApp
+                  Order Bestseller on WhatsApp
                 </a>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-[#2B243F]/70 mb-6 text-lg">
-            Join hundreds of happy customers who trust Gooey Mooey for their special moments
-          </p>
-          <a
-            href="https://wa.me/919266987600"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary inline-block"
-          >
-            Start Your Order Today
-          </a>
         </div>
       </div>
     </section>
