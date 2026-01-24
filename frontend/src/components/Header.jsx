@@ -51,33 +51,33 @@ const Header = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="container-custom px-4 md:px-8">
+      <div className="container-custom px-4 md:px-6">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <div 
-            className="flex items-center space-x-2 cursor-pointer" 
+            className="flex items-center space-x-2 cursor-pointer flex-1" 
             onClick={() => navigate('/')}
           >
-            <Logo className="h-12 md:h-16 lg:h-20 w-auto flex-shrink-0" />
+            <Logo className="h-14 md:h-16 lg:h-20 w-auto flex-shrink-0" />
             
-            {/* Brand Text - Single Line */}
-            <div className="lg:hidden">
+            {/* Brand Text - Single Line - Larger on mobile */}
+            <div className="lg:hidden flex-1 min-w-0">
               <span 
-                className="text-sm md:text-base font-bold text-[#2B243F]" 
+                className="text-base md:text-lg font-bold text-[#2B243F] block" 
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Gooey Mooey <span className="text-[#7662B2] text-xs md:text-sm font-normal italic">: Love at First Bite</span>
+                Gooey Mooey <span className="text-[#7662B2] text-sm md:text-base font-normal italic whitespace-nowrap">: Love at First Bite</span>
               </span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {menuItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavigation(item)}
-                className={`font-semibold text-sm transition-colors duration-300 relative group ${
+                className={`font-semibold text-base transition-colors duration-300 relative group ${
                   isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
                 }`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -94,7 +94,7 @@ const Header = () => {
             href="https://wa.me/919266987600"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center btn-primary text-sm px-5 py-2.5"
+            className="hidden lg:flex items-center btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
           >
             Order on WhatsApp
           </a>
@@ -113,7 +113,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-[#E1CAFF] shadow-lg">
-          <nav className="flex flex-col px-6 py-3 space-y-3">
+          <nav className="flex flex-col px-4 py-3 space-y-3">
             {menuItems.map((item) => (
               <button
                 key={item.label}

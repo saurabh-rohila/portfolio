@@ -6,16 +6,16 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="home" className="relative pt-32 pb-12 md:pt-36 md:pb-16 overflow-hidden">
+    <section id="home" className="relative pt-28 pb-10 md:pt-32 md:pb-14 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#E1CAFF]/30 via-white to-[#C0C2FD]/20 -z-10" />
       <div className="absolute top-20 right-10 w-64 h-64 bg-[#FFB8CB]/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-10 left-10 w-64 h-64 bg-[#7662B2]/10 rounded-full blur-3xl -z-10" />
 
-      <div className="container-custom px-6 md:px-12">
+      <div className="container-custom px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-6 animate-fade-in-up">
+          <div className="space-y-5 animate-fade-in-up">
             <div className="inline-flex items-center space-x-2 bg-[#E1CAFF]/30 px-3 py-1.5 rounded-full">
               <Star className="w-4 h-4 text-[#FF859F] fill-[#FF859F]" />
               <span className="text-xs font-semibold text-[#2B243F]">Premium Bakery in Gurugram</span>
@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-3">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
                 href="https://wa.me/919266987600"
                 target="_blank"
@@ -64,24 +64,24 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Right Column - Hero Image Placeholder */}
+          {/* Right Column - Hero Image Placeholder - Smaller */}
           <div className="relative">
-            <div className="product-placeholder h-[350px] md:h-[400px] rounded-2xl shadow-xl animate-float">
-              <div className="flex flex-col items-center justify-center space-y-4 p-8">
-                <Sparkles className="w-12 h-12 text-[#7662B2]" />
-                <p className="text-center text-[#7662B2] font-semibold text-base">
+            <div className="product-placeholder h-[280px] md:h-[320px] rounded-2xl shadow-xl animate-float">
+              <div className="flex flex-col items-center justify-center space-y-3 p-6">
+                <Sparkles className="w-10 h-10 text-[#7662B2]" />
+                <p className="text-center text-[#7662B2] font-semibold text-sm">
                   Premium Bakery Photography
                   <br />
-                  <span className="text-sm font-normal">(Add your beautiful cake photos here)</span>
+                  <span className="text-xs font-normal">(Add your beautiful cake photos here)</span>
                 </p>
               </div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 bg-[#FF859F] rounded-full p-3 shadow-lg">
-              <Award className="w-6 h-6 text-white" />
+            {/* Decorative elements - smaller */}
+            <div className="absolute -top-3 -right-3 bg-[#FF859F] rounded-full p-2.5 shadow-lg">
+              <Award className="w-5 h-5 text-white" />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-[#7662B2] rounded-full p-3 shadow-lg">
-              <Package className="w-6 h-6 text-white" />
+            <div className="absolute -bottom-3 -left-3 bg-[#7662B2] rounded-full p-2.5 shadow-lg">
+              <Package className="w-5 h-5 text-white" />
             </div>
           </div>
         </div>
