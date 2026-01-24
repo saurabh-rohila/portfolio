@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+    <section id="home" className="relative pt-40 pb-16 md:pt-48 md:pb-24 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#E1CAFF]/30 via-white to-[#C0C2FD]/20 -z-10" />
       <div className="absolute top-20 right-10 w-64 h-64 bg-[#FFB8CB]/10 rounded-full blur-3xl -z-10" />
