@@ -6,22 +6,17 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden">
-      {/* Background image with overlay */}
+    <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center">
+      {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center -z-20"
         style={{
-          backgroundImage: `url('https://customer-assets.emergentagent.com/job_23e71ef4-908c-4c8d-b75d-56e2ceb96e90/artifacts/1hucnt5l_PVP11747%20%281%29.png')`,
-          opacity: 0.15
+          backgroundImage: `url('https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/jxuf4jet_PVP11747%20%281%29.png')`
         }}
       />
       
-      {/* Gradient overlay for better content visibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-[#E1CAFF]/90 to-[#C0C2FD]/85 -z-10" />
-      
-      {/* Additional decorative blur elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 bg-[#FFB8CB]/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-10 left-10 w-64 h-64 bg-[#7662B2]/10 rounded-full blur-3xl -z-10" />
+      {/* Semi-transparent lavender overlay for text readability */}
+      <div className="absolute inset-0 bg-[#E1CAFF]/75 -z-10" />
 
       <div className="container-custom px-3 md:px-6">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
