@@ -6,12 +6,12 @@ const FeaturedPreview = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: 'Celebration Cakes' },
-    { name: 'Bento Cakes' },
-    { name: 'Cupcakes' },
-    { name: 'Cookies' },
-    { name: 'Brownies' },
-    { name: 'Cheesecake Jars' },
+    { name: 'Celebration Cakes', image: null },
+    { name: 'Bento Cakes', image: null },
+    { name: 'Cupcakes', image: null },
+    { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
+    { name: 'Brownies', image: null },
+    { name: 'Cheesecake Jars', image: null },
   ];
 
   return (
@@ -32,9 +32,20 @@ const FeaturedPreview = () => {
               onClick={() => navigate('/menu')}
               className="bg-gradient-to-br from-[#E1CAFF]/20 to-[#C0C2FD]/20 rounded-lg p-2 text-center hover:bg-white transition-colors cursor-pointer shadow-md hover:shadow-lg"
             >
-              {/* Photo placeholder box */}
-              <div className="product-placeholder h-16 md:h-20 rounded-lg mb-1.5 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-[#7662B2]" />
+              {/* Photo box */}
+              <div className="h-16 md:h-20 rounded-lg mb-1.5 flex items-center justify-center overflow-hidden">
+                {product.image ? (
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="product-placeholder w-full h-full rounded-lg flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-[#7662B2]" />
+                  </div>
+                )}
               </div>
               {/* Product name */}
               <p className="font-semibold text-xs text-[#2B243F] leading-tight">
