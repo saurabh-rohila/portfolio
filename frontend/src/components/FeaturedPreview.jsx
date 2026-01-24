@@ -10,7 +10,7 @@ const FeaturedPreview = () => {
     { name: 'Bento Cakes', image: null },
     { name: 'Cupcakes', image: null },
     { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
-    { name: 'Brownies', image: null },
+    { name: 'Brownies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/pcvd41p5_PVP11741.jpg' },
     { name: 'Cheesecake Jars', image: null },
   ];
 
