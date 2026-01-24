@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Menu, X, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,20 +18,31 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Menu', href: '#menu' },
-    { label: 'Bestsellers', href: '#bestsellers' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', path: '/' },
+    { label: 'Menu & Order', path: '/menu' },
+    { label: 'Instagram', href: 'https://www.instagram.com/gooeymooey.in/', external: true },
+    { label: 'Contact', path: '/', hash: '#contact' },
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+  const handleNavigation = (item) => {
+    if (item.external) {
+      window.open(item.href, '_blank');
+    } else if (item.hash) {
+      navigate(item.path);
+      setTimeout(() => {
+        const element = document.querySelector(item.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      navigate(item.path);
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -39,11 +53,14 @@ const Header = () => {
     >
       <div className="container-custom px-6 md:px-12">
         <div className="flex items-center justify-between py-4">
-          {/* Logo - Full brand logo as per guidelines */}
-          <div className="flex items-center space-x-3">
+          {/* Logo */}
+          <div 
+            className="flex items-center space-x-3 cursor-pointer" 
+            onClick={() => navigate('/')}
+          >
             <Logo className="h-16 md:h-20 lg:h-24 w-auto" />
             
-            {/* Brand Text for Mobile/Tablet - visible on smaller screens */}
+            {/* Brand Text for Mobile/Tablet */}
             <div className="flex flex-col lg:hidden">
               <span 
                 className="text-base md:text-lg font-bold text-[#2B243F]" 
@@ -65,10 +82,13 @@ const Header = () => {
             {menuItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-[#2B243F] hover:text-[#7662B2] font-semibold text-base transition-colors duration-300 relative group"
+                onClick={() => handleNavigation(item)}
+                className={`font-semibold text-base transition-colors duration-300 relative group ${
+                  isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
+                }`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
+                {item.label === 'Instagram' && <Instagram className="w-5 h-5 inline mr-1" />}
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7662B2] transition-all duration-300 group-hover:w-full"></span>
               </button>
@@ -103,11 +123,14 @@ const Header = () => {
             {menuItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-[#2B243F] hover:text-[#7662B2] font-semibold transition-colors text-left text-base"
+                onClick={() => handleNavigation(item)}
+                className={`font-semibold transition-colors text-left text-base flex items-center space-x-2 ${
+                  isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
+                }`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                {item.label}
+                {item.label === 'Instagram' && <Instagram className="w-5 h-5" />}
+                <span>{item.label}</span>
               </button>
             ))}
             <a

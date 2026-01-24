@@ -1,13 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Star, Sparkles, Award, Package } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToMenu = () => {
-    const menuSection = document.querySelector('#menu');
-    if (menuSection) {
-      menuSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative pt-40 pb-16 md:pt-48 md:pb-24 overflow-hidden">
@@ -55,10 +51,10 @@ const Hero = () => {
                 <span className="text-sm">(Instant Reply)</span>
               </a>
               <button
-                onClick={scrollToMenu}
+                onClick={() => navigate('/menu')}
                 className="btn-secondary inline-flex items-center justify-center space-x-2 text-lg"
               >
-                <span>Explore Our Menu</span>
+                <span>View Menu & Prices</span>
               </button>
             </div>
 
@@ -88,26 +84,6 @@ const Hero = () => {
               <Package className="w-8 h-8 text-white" />
             </div>
           </div>
-        </div>
-
-        {/* Trust Strip */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {[
-            { icon: Sparkles, text: 'Freshly Baked Daily' },
-            { icon: Award, text: 'Premium Ingredients' },
-            { icon: Star, text: 'Custom Designs Available' },
-            { icon: Package, text: 'Safe Packaging' },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center space-y-3 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] p-4 rounded-full">
-                <item.icon className="w-6 h-6 text-[#7662B2]" />
-              </div>
-              <p className="text-sm font-semibold text-[#2B243F]">{item.text}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

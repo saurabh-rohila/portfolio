@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Products from './components/Products';
-import About from './components/About';
-import Menu from './components/Menu';
-import Bestsellers from './components/Bestsellers';
-import Reviews from './components/Reviews';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MobileBottomBar from './components/MobileBottomBar';
+import Home from './pages/Home';
+import MenuPage from './pages/MenuPage';
 
 function App() {
   useEffect(() => {
@@ -27,20 +24,29 @@ function App() {
       meta.content = 'Order premium handcrafted cakes, bento cakes, cupcakes and desserts from Gooey Mooey. Custom cakes for birthdays, celebrations and gifting in Gurugram.';
       document.getElementsByTagName('head')[0].appendChild(meta);
     }
+
+    // Add keywords meta tag
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = 'keywords';
+      document.getElementsByTagName('head')[0].appendChild(metaKeywords);
+    }
+    metaKeywords.content = 'Bakery in Gurugram, Custom Cakes Gurgaon, Bento Cakes Gurgaon, Birthday Cake Delivery Gurgaon';
   }, []);
 
   return (
-    <div className="App bg-[#f7f5f2]">
-      <Header />
-      <Hero />
-      <Products />
-      <About />
-      <Menu />
-      <Bestsellers />
-      <Reviews />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<MenuPage />} />
+        </Routes>
+        <Footer />
+        <MobileBottomBar />
+      </div>
+    </BrowserRouter>
   );
 }
 
