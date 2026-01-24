@@ -10,7 +10,7 @@ const Hero = () => {
       id="home" 
       className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(225, 202, 255, 0.55), rgba(225, 202, 255, 0.55)), url("/hero-bg-optimized.jpg")`,
+        backgroundImage: `linear-gradient(rgba(225, 202, 255, 0.70), rgba(225, 202, 255, 0.70)), url("/hero-bg-optimized.jpg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -21,11 +21,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-5 items-center">
           {/* Left Column - Content - All Centered */}
           <div className="space-y-3 animate-fade-in-up text-center">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2B243F] leading-tight drop-shadow-sm">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#2B243F] leading-tight drop-shadow-sm">
               Premium Custom Cakes & Desserts in Delhi NCR
             </h1>
 
-            <p className="text-sm md:text-base text-[#2B243F] leading-relaxed font-semibold drop-shadow-sm">
+            <p className="text-base md:text-lg text-[#2B243F] leading-relaxed font-semibold drop-shadow-sm">
               Freshly baked, beautifully designed cakes and desserts for birthdays, celebrations, gifting & corporate orders.
             </p>
 
@@ -70,25 +70,29 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - 3 Photo Boxes */}
+          {/* Right Column - 3 Product Photo Boxes */}
           <div className="grid grid-cols-3 gap-2">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="relative">
-                <div className="product-placeholder h-[120px] md:h-[150px] rounded-lg shadow-lg">
-                  <div className="flex flex-col items-center justify-center h-full p-2">
-                    <Sparkles className="w-6 h-6 text-[#7662B2] mb-1" />
-                    <p className="text-center text-[#7662B2] font-semibold text-xs">
-                      Photo {num}
-                    </p>
-                  </div>
+            {[
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/ndae0adx_PVP11388.jpg", alt: "Fruit Cake" },
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/oj3efktr_PVP11292.jpg", alt: "Chocolate Cake" },
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/1tmb7p0u_PVP11357.jpg", alt: "Pink Cake" }
+            ].map((photo, index) => (
+              <div key={index} className="relative">
+                <div className="h-[120px] md:h-[150px] rounded-lg shadow-lg overflow-hidden border-4 border-white">
+                  <img 
+                    src={photo.src} 
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 {/* Small decorative badge */}
-                {num === 1 && (
+                {index === 0 && (
                   <div className="absolute -top-1 -right-1 bg-[#FF859F] rounded-full p-1 shadow-md">
                     <Award className="w-3 h-3 text-white" />
                   </div>
                 )}
-                {num === 3 && (
+                {index === 2 && (
                   <div className="absolute -bottom-1 -left-1 bg-[#7662B2] rounded-full p-1 shadow-md">
                     <Package className="w-3 h-3 text-white" />
                   </div>
