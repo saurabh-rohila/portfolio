@@ -70,7 +70,7 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-2">
             {[
               { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/ndae0adx_PVP11388.jpg", alt: "Fruit Cake" },
-              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/dierq7hb_WhatsApp%20Image%202026-01-24%20at%208.52.48%20PM.jpeg", alt: "Beach Theme Cake" },
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/1tmb7p0u_PVP11357.jpg", alt: "Pink Cake" },
               { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/oj3efktr_PVP11292.jpg", alt: "Chocolate Cake" }
             ].map((photo, index) => (
               <div key={index} className="relative">
