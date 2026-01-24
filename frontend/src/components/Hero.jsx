@@ -25,10 +25,6 @@ const Hero = () => {
               Premium Custom Cakes & Desserts in Delhi NCR
             </h1>
 
-            <p className="text-base md:text-lg text-[#2B243F] leading-relaxed font-semibold drop-shadow-sm italic">
-              Freshly baked, beautifully designed cakes and desserts for birthdays, celebrations, gifting & corporate orders.
-            </p>
-
             {/* Trust Line with Google Rating - Centered */}
             <div className="flex flex-col items-center space-y-2">
               <div className="flex items-center space-x-1">
