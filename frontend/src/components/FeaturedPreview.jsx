@@ -6,7 +6,7 @@ const FeaturedPreview = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: 'Celebration Cakes', image: null },
+    { name: 'Celebration Cakes', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/vukwd16d_WhatsApp%20Image%202026-01-24%20at%208.45.31%20PM.jpeg' },
     { name: 'Bento Cakes', image: null },
     { name: 'Cupcakes', image: null },
     { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
