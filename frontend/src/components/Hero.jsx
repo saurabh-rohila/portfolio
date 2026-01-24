@@ -74,11 +74,11 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-2">
             {[
               { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/ndae0adx_PVP11388.jpg", alt: "Fruit Cake" },
-              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/oj3efktr_PVP11292.jpg", alt: "Chocolate Cake" },
-              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/1tmb7p0u_PVP11357.jpg", alt: "Pink Cake" }
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/1tmb7p0u_PVP11357.jpg", alt: "Pink Cake" },
+              { src: "https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/oj3efktr_PVP11292.jpg", alt: "Chocolate Cake" }
             ].map((photo, index) => (
               <div key={index} className="relative">
-                <div className="h-[120px] md:h-[150px] rounded-lg shadow-lg overflow-hidden border-4 border-white">
+                <div className="h-[132px] md:h-[165px] rounded-lg shadow-lg overflow-hidden border-4 border-white">
                   <img 
                     src={photo.src} 
                     alt={photo.alt}
@@ -86,17 +86,6 @@ const Hero = () => {
                     loading="lazy"
                   />
                 </div>
-                {/* Small decorative badge */}
-                {index === 0 && (
-                  <div className="absolute -top-1 -right-1 bg-[#FF859F] rounded-full p-1 shadow-md">
-                    <Award className="w-3 h-3 text-white" />
-                  </div>
-                )}
-                {index === 2 && (
-                  <div className="absolute -bottom-1 -left-1 bg-[#7662B2] rounded-full p-1 shadow-md">
-                    <Package className="w-3 h-3 text-white" />
-                  </div>
-                )}
               </div>
             ))}
           </div>
