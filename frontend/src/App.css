@@ -32,3 +32,13 @@
         transform: rotate(360deg);
     }
 }
+
+/* Ensure smooth scrolling and no horizontal overflow */
+body, html {
+    overflow-x: hidden;
+}
+
+/* Remove default text-align center from App container */
+.App {
+    text-align: left;
+}
