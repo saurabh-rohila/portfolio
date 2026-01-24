@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, Sparkles, Award, Package } from 'lucide-react';
+import { Star, Award, Package } from 'lucide-react';
 
 const Hero = () => {
   const navigate = useNavigate();
