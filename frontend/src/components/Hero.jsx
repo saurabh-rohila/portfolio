@@ -24,15 +24,24 @@ const Hero = () => {
               Freshly baked, beautifully designed cakes and desserts for birthdays, celebrations, gifting & corporate orders.
             </p>
 
-            {/* Trust Line */}
-            <div className="flex items-center space-x-1.5 text-[#2B243F]">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 text-[#FF859F] fill-[#FF859F]" />
-                ))}
+            {/* Trust Line with Google Rating */}
+            <div className="flex items-center space-x-2 text-[#2B243F]">
+              <div className="flex items-center space-x-1">
+                <span className="font-bold text-[#2B243F] text-base">4.9</span>
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className={`w-3.5 h-3.5 ${i < 5 ? 'text-[#FF859F] fill-[#FF859F]' : 'text-gray-300'}`}
+                    />
+                  ))}
+                </div>
+                <span className="text-xs text-[#2B243F]/60">(Google Rating)</span>
               </div>
-              <span className="font-semibold text-xs">Trusted by hundreds of happy customers in Delhi NCR</span>
             </div>
+            <p className="text-xs font-semibold text-[#2B243F]">
+              Trusted by hundreds of happy customers
+            </p>
 
             {/* CTA Buttons - 25% smaller */}
             <div className="flex flex-col sm:flex-row gap-2 pt-2">
