@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Instagram, MapPin, Clock } from 'lucide-react';
+import { MessageCircle, Instagram, MapPin, Clock, Navigation } from 'lucide-react';
 
 const Contact = () => {
   const orderFields = [
@@ -8,6 +8,7 @@ const Contact = () => {
     { label: 'Servings', icon: '👥' },
     { label: 'Flavour', icon: '🍰' },
     { label: 'Design', icon: '🎨' },
+    { label: 'Delivery', icon: '📍' },
   ];
 
   return (
@@ -86,11 +87,11 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right - What to Share - Grid View like reviews */}
+          {/* Right - What to Share - Grid View with 6 items */}
           <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] rounded-lg p-3 text-[#2B243F]">
             <h3 className="text-base font-bold mb-3 text-center">What to Share When Ordering</h3>
 
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-3 gap-2">
               {orderFields.map((field, index) => (
                 <div key={index} className="bg-white/70 rounded-lg p-2.5 text-center hover:bg-white transition-colors">
                   <div className="text-xl mb-1">{field.icon}</div>
@@ -104,15 +105,6 @@ const Contact = () => {
                 Don't worry if you're unsure! Our team will guide you. 💜
               </p>
             </div>
-
-            <a
-              href="https://wa.me/919266987600"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 bg-[#2B243F] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-[#1a1429] transition-all duration-300 hover:scale-105 active:scale-95 w-full text-center block text-xs"
-            >
-              Start Your Order Now
-            </a>
           </div>
         </div>
       </div>

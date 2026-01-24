@@ -23,17 +23,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#2B243F] text-white">
+    <footer className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] text-[#2B243F]">
       <div className="container-custom px-3 md:px-6 py-5">
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Left Column - Brand + Social */}
+          {/* Left Column - Brand + Description side by side + Social */}
           <div className="space-y-3">
-            <div className="flex items-center bg-white rounded-lg p-2 w-fit">
-              <Logo className="h-16 w-auto" />
+            <div className="flex items-start space-x-3">
+              {/* Logo with white background */}
+              <div className="flex-shrink-0 bg-white rounded-lg p-2">
+                <Logo className="h-16 w-auto" />
+              </div>
+              
+              {/* Description text on the right */}
+              <p className="text-[#2B243F]/80 leading-relaxed text-xs pt-2">
+                Premium handcrafted cakes and desserts made with passion. Serving the sweetest moments in Gurugram since day one.
+              </p>
             </div>
-            <p className="text-white/70 leading-relaxed text-xs">
-              Premium handcrafted cakes and desserts made with passion. Serving the sweetest moments in Gurugram since day one.
-            </p>
+            
             <div className="flex space-x-2">
               {/* Instagram - Original gradient colors */}
               <a
@@ -69,13 +75,13 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-4">
             {/* Quick Links */}
             <div>
-              <h4 className="text-sm font-bold mb-2">Quick Links</h4>
+              <h4 className="text-sm font-bold mb-2 text-[#2B243F]">Quick Links</h4>
               <ul className="space-y-1">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <button
                       onClick={() => scrollToSection(link.href)}
-                      className="text-white/70 hover:text-[#E1CAFF] transition-colors text-xs"
+                      className="text-[#2B243F]/70 hover:text-[#7662B2] transition-colors text-xs"
                     >
                       {link.label}
                     </button>
@@ -86,27 +92,27 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-sm font-bold mb-2">Get in Touch</h4>
-              <ul className="space-y-1 text-white/70 text-xs">
+              <h4 className="text-sm font-bold mb-2 text-[#2B243F]">Get in Touch</h4>
+              <ul className="space-y-1 text-[#2B243F]/70 text-xs">
                 <li>
-                  <span className="block font-semibold text-white mb-0.5">WhatsApp</span>
-                  <a href="https://wa.me/919266987600" className="hover:text-[#E1CAFF] transition-colors">
+                  <span className="block font-semibold text-[#2B243F] mb-0.5">WhatsApp</span>
+                  <a href="https://wa.me/919266987600" className="hover:text-[#7662B2] transition-colors">
                     +91 92669 87600
                   </a>
                 </li>
                 <li>
-                  <span className="block font-semibold text-white mb-0.5">Instagram</span>
+                  <span className="block font-semibold text-[#2B243F] mb-0.5">Instagram</span>
                   <a
                     href="https://www.instagram.com/gooeymooey.in/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#E1CAFF] transition-colors"
+                    className="hover:text-[#7662B2] transition-colors"
                   >
                     @gooeymooey.in
                   </a>
                 </li>
                 <li>
-                  <span className="block font-semibold text-white mb-0.5">Location</span>
+                  <span className="block font-semibold text-[#2B243F] mb-0.5">Location</span>
                   <span>Gurugram, India</span>
                 </li>
               </ul>
@@ -115,15 +121,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-3 mt-4">
+        <div className="border-t border-[#2B243F]/20 pt-3 mt-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <p className="text-white/70 text-xs">
+            <p className="text-[#2B243F]/70 text-xs">
               © {new Date().getFullYear()} Gooey Mooey. All Rights Reserved.
             </p>
             <div className="flex items-center space-x-1.5 text-xs">
-              <span className="text-white/70">Made with</span>
+              <span className="text-[#2B243F]/70">Made with</span>
               <Heart className="w-3 h-3 text-[#FF859F] fill-[#FF859F]" />
-              <span className="text-white/70">for sweet moments</span>
+              <span className="text-[#2B243F]/70">for sweet moments</span>
             </div>
           </div>
         </div>

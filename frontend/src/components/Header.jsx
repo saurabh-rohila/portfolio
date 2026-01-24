@@ -52,16 +52,16 @@ const Header = () => {
       }`}
     >
       <div className="container-custom px-3 md:px-6">
-        <div className="flex items-center justify-between py-1.5">
-          {/* Logo with Brand Text - 90% of header height */}
+        <div className="flex items-center justify-between py-1">
+          {/* Logo with Brand Text - Reduced padding */}
           <div 
             className="flex items-center space-x-2 cursor-pointer flex-1" 
             onClick={() => navigate('/')}
           >
-            {/* Logo - 90% of header height */}
-            <Logo className="h-20 md:h-24 lg:h-28 w-auto flex-shrink-0" />
+            {/* Logo */}
+            <Logo className="h-16 md:h-20 lg:h-24 w-auto flex-shrink-0" />
             
-            {/* Brand Text - Two Lines with larger size */}
+            {/* Brand Text */}
             <div className="flex flex-col lg:hidden">
               <span 
                 className="text-xl md:text-2xl font-bold text-[#2B243F] leading-tight" 
