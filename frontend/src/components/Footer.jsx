@@ -25,16 +25,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center space-x-4">
-              <Logo className="w-20 h-20" />
-              <div>
-                <h3 className="text-2xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  Gooey Mooey
-                </h3>
-                <p className="text-[#E1CAFF] italic" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  Love at First Bite
-                </p>
-              </div>
+            <div className="flex items-center">
+              <Logo className="h-24 w-auto" />
             </div>
             <p className="text-white/70 leading-relaxed max-w-md">
               Premium handcrafted cakes and desserts made with passion. Serving the sweetest moments in Gurugram since day one.
