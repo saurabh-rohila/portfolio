@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Cake, Cookie, Cupcake, Gift, IceCream, PartyPopper } from 'lucide-react';
+import { ArrowRight, Cake, Cookie, CircleDot, Gift, IceCream, PartyPopper } from 'lucide-react';
 
 const FeaturedPreview = () => {
   const navigate = useNavigate();
