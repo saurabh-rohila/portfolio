@@ -51,44 +51,38 @@ const Header = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="container-custom px-6 md:px-12">
-        <div className="flex items-center justify-between py-4">
+      <div className="container-custom px-4 md:px-8">
+        <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <div 
-            className="flex items-center space-x-3 cursor-pointer" 
+            className="flex items-center space-x-2 cursor-pointer" 
             onClick={() => navigate('/')}
           >
-            <Logo className="h-16 md:h-20 lg:h-24 w-auto" />
+            <Logo className="h-12 md:h-16 lg:h-20 w-auto flex-shrink-0" />
             
-            {/* Brand Text for Mobile/Tablet */}
-            <div className="flex flex-col lg:hidden">
+            {/* Brand Text - Single Line */}
+            <div className="lg:hidden">
               <span 
-                className="text-base md:text-lg font-bold text-[#2B243F]" 
+                className="text-sm md:text-base font-bold text-[#2B243F]" 
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Gooey Mooey
-              </span>
-              <span 
-                className="text-xs text-[#7662B2] italic" 
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
-                Love at First Bite
+                Gooey Mooey <span className="text-[#7662B2] text-xs md:text-sm font-normal italic">: Love at First Bite</span>
               </span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {menuItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavigation(item)}
-                className={`font-semibold text-base transition-colors duration-300 relative group ${
+                className={`font-semibold text-sm transition-colors duration-300 relative group ${
                   isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
                 }`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                {item.label === 'Instagram' && <Instagram className="w-5 h-5 inline mr-1" />}
+                {item.label === 'Instagram' && <Instagram className="w-4 h-4 inline mr-1" />}
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7662B2] transition-all duration-300 group-hover:w-full"></span>
               </button>
@@ -100,7 +94,7 @@ const Header = () => {
             href="https://wa.me/919266987600"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center btn-primary text-base px-6 py-3"
+            className="hidden lg:flex items-center btn-primary text-sm px-5 py-2.5"
           >
             Order on WhatsApp
           </a>
@@ -111,7 +105,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -119,17 +113,17 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-[#E1CAFF] shadow-lg">
-          <nav className="flex flex-col px-6 py-4 space-y-4">
+          <nav className="flex flex-col px-6 py-3 space-y-3">
             {menuItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavigation(item)}
-                className={`font-semibold transition-colors text-left text-base flex items-center space-x-2 ${
+                className={`font-semibold transition-colors text-left text-sm flex items-center space-x-2 ${
                   isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
                 }`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                {item.label === 'Instagram' && <Instagram className="w-5 h-5" />}
+                {item.label === 'Instagram' && <Instagram className="w-4 h-4" />}
                 <span>{item.label}</span>
               </button>
             ))}
@@ -137,7 +131,7 @@ const Header = () => {
               href="https://wa.me/919266987600"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-center"
+              className="btn-primary text-center text-sm"
             >
               Order on WhatsApp
             </a>

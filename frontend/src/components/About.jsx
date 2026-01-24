@@ -21,63 +21,44 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-[#E1CAFF]/20 to-[#C0C2FD]/20">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image Placeholder */}
-          <div className="order-2 lg:order-1">
-            <div className="product-placeholder h-[400px] md:h-[500px] rounded-3xl shadow-xl">
-              <div className="flex flex-col items-center justify-center space-y-4 p-8">
-                <Heart className="w-16 h-16 text-[#7662B2]" />
-                <p className="text-center text-[#7662B2] font-semibold text-lg">
-                  Behind the Scenes
-                  <br />
-                  <span className="text-sm font-normal">(Add bakery/team photos here)</span>
-                </p>
-              </div>
+    <section id="about" className="py-12 md:py-16 bg-gradient-to-br from-[#E1CAFF]/20 to-[#C0C2FD]/20">
+      <div className="container-custom px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-gradient mb-4">About Gooey Mooey</h2>
+            <div className="space-y-3 text-base md:text-lg text-[#2B243F]/80 leading-relaxed">
+              <p>
+                At Gooey Mooey, every dessert is crafted with <span className="font-bold text-[#7662B2]">passion</span>,{' '}
+                <span className="font-bold text-[#7662B2]">precision</span> and{' '}
+                <span className="font-bold text-[#7662B2]">premium ingredients</span>.
+              </p>
+              <p>
+                We specialize in custom celebration cakes, gourmet desserts and gifting solutions that not only taste exceptional but look stunning too.
+              </p>
+              <p>
+                Whether it's a birthday, anniversary, festive celebration or corporate event —{' '}
+                <span className="font-bold italic" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  Gooey Mooey makes every occasion sweeter
+                </span>
+                .
+              </p>
             </div>
           </div>
 
-          {/* Right Column - Content */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <div>
-              <h2 className="text-gradient mb-6">About Gooey Mooey</h2>
-              <div className="space-y-4 text-lg text-[#2B243F]/80 leading-relaxed">
-                <p>
-                  At Gooey Mooey, every dessert is crafted with <span className="font-bold text-[#7662B2]">passion</span>,{' '}
-                  <span className="font-bold text-[#7662B2]">precision</span> and{' '}
-                  <span className="font-bold text-[#7662B2]">premium ingredients</span>.
-                </p>
-                <p>
-                  We specialize in custom celebration cakes, gourmet desserts and gifting solutions that not only taste exceptional but look stunning too.
-                </p>
-                <p>
-                  Whether it's a birthday, anniversary, festive celebration or corporate event —{' '}
-                  <span className="font-bold italic" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    Gooey Mooey makes every occasion sweeter
-                  </span>
-                  .
-                </p>
-              </div>
-            </div>
-
-            {/* Pillars */}
-            <div className="space-y-6 pt-6">
-              {pillars.map((pillar, index) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] p-3 rounded-full flex-shrink-0">
-                    <pillar.icon className="w-6 h-6 text-[#7662B2]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#2B243F] mb-2">{pillar.title}</h3>
-                    <p className="text-[#2B243F]/70">{pillar.description}</p>
-                  </div>
+          {/* Pillars */}
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            {pillars.map((pillar, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] p-3 rounded-full mb-3">
+                  <pillar.icon className="w-5 h-5 text-[#7662B2]" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-base font-bold text-[#2B243F] mb-2">{pillar.title}</h3>
+                <p className="text-sm text-[#2B243F]/70">{pillar.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import TrustStrip from '../components/TrustStrip';
 import FeaturedPreview from '../components/FeaturedPreview';
 import About from '../components/About';
-import Bestsellers from '../components/Bestsellers';
 import Reviews from '../components/Reviews';
 import Contact from '../components/Contact';
 
@@ -14,7 +13,6 @@ const Home = () => {
       <TrustStrip />
       <FeaturedPreview />
       <About />
-      <Bestsellers />
       <Reviews />
       <Contact />
     </div>
