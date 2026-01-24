@@ -14,8 +14,8 @@ const Hero = () => {
 
       <div className="container-custom px-3 md:px-6">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
-          {/* Left Column - Content */}
-          <div className="space-y-3 animate-fade-in-up">
+          {/* Left Column - Content - All Centered */}
+          <div className="space-y-3 animate-fade-in-up text-center">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2B243F] leading-tight">
               Premium Custom Cakes & Desserts in Delhi NCR
             </h1>
@@ -24,8 +24,8 @@ const Hero = () => {
               Freshly baked, beautifully designed cakes and desserts for birthdays, celebrations, gifting & corporate orders.
             </p>
 
-            {/* Trust Line with Google Rating */}
-            <div className="flex items-center space-x-2 text-[#2B243F]">
+            {/* Trust Line with Google Rating - Centered */}
+            <div className="flex flex-col items-center space-y-2 text-[#2B243F]">
               <div className="flex items-center space-x-1">
                 <span className="font-bold text-[#2B243F] text-base">4.9</span>
                 <div className="flex">
@@ -38,13 +38,13 @@ const Hero = () => {
                 </div>
                 <span className="text-xs text-[#2B243F]/60">(Google Rating)</span>
               </div>
+              <p className="text-xs font-semibold text-[#2B243F]">
+                Trusted by hundreds of happy customers
+              </p>
             </div>
-            <p className="text-xs font-semibold text-[#2B243F]">
-              Trusted by hundreds of happy customers
-            </p>
 
-            {/* CTA Buttons - 25% smaller */}
-            <div className="flex flex-col sm:flex-row gap-2">
+            {/* CTA Buttons - Centered */}
+            <div className="flex flex-col sm:flex-row gap-2 pt-2 justify-center">
               <a
                 href="https://wa.me/919266987600"
                 target="_blank"
