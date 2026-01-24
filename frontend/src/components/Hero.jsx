@@ -9,16 +9,20 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative pt-24 pb-5 md:pt-28 md:pb-8 overflow-hidden min-h-[85vh] flex items-center">
-      {/* Background image */}
-      <img
-        src={heroImageUrl}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover -z-20"
-        loading="lazy"
+      {/* Background image using CSS background */}
+      <div 
+        className="absolute inset-0 -z-20"
+        style={{
+          backgroundImage: `url("${heroImageUrl}")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#E1CAFF'
+        }}
       />
       
       {/* Semi-transparent lavender overlay for text readability */}
-      <div className="absolute inset-0 bg-[#E1CAFF]/50 -z-10" />
+      <div className="absolute inset-0 bg-[#E1CAFF]/40 backdrop-blur-[1px] -z-10" />
 
       <div className="container-custom px-3 md:px-6">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
