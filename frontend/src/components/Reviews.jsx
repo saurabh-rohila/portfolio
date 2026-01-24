@@ -4,14 +4,14 @@ import { instagramPosts } from '../data/mock';
 
 const Reviews = () => {
   return (
-    <section id="reviews" className="py-12 md:py-16 bg-white">
-      <div className="container-custom px-6 md:px-12">
-        <div className="text-center mb-10">
+    <section id="reviews" className="py-10 md:py-14 bg-white">
+      <div className="container-custom px-4 md:px-6">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center space-x-2 bg-[#FF859F]/20 px-3 py-1.5 rounded-full mb-3">
             <Heart className="w-4 h-4 text-[#FF859F] fill-[#FF859F]" />
             <span className="text-xs font-semibold text-[#2B243F]">Customer Love</span>
           </div>
-          <h2 className="text-gradient mb-3">Why Customers Love Gooey Mooey</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2B243F] mb-3">Why Customers Love Gooey Mooey</h2>
           <p className="text-base text-[#2B243F]/70 max-w-2xl mx-auto">
             Real reviews from our amazing customers on Instagram
           </p>

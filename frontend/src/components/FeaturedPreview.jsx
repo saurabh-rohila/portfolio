@@ -15,16 +15,16 @@ const FeaturedPreview = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-[#E1CAFF]/20 to-white">
-      <div className="container-custom px-6 md:px-12">
-        <div className="text-center mb-10">
-          <h2 className="text-gradient mb-3">Our Sweet Collection</h2>
+    <section className="py-10 md:py-14 bg-gradient-to-br from-[#E1CAFF]/20 to-white">
+      <div className="container-custom px-4 md:px-6">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2B243F] mb-3">Our Sweet Collection</h2>
           <p className="text-base text-[#2B243F]/70 max-w-2xl mx-auto">
             Preview our delicious range - click to view full menu with prices
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.map((product, index) => (
             <div
               key={index}
@@ -32,7 +32,7 @@ const FeaturedPreview = () => {
               onClick={() => navigate('/menu')}
             >
               {/* Image Placeholder */}
-              <div className="product-placeholder h-56 relative overflow-hidden">
+              <div className="product-placeholder h-48 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="text-[#7662B2] font-semibold text-center px-4 text-sm">
                     {product.name}
@@ -45,8 +45,8 @@ const FeaturedPreview = () => {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-white transform translate-y-0 transition-transform duration-500">
-                <h3 className="text-lg font-bold text-[#2B243F] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-white transform translate-y-0 transition-transform duration-500">
+                <h3 className="text-base font-bold text-[#2B243F] mb-2">
                   {product.name}
                 </h3>
                 <button
@@ -60,7 +60,7 @@ const FeaturedPreview = () => {
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-7">
           <button
             onClick={() => navigate('/menu')}
             className="btn-primary inline-block text-base px-6 py-3"

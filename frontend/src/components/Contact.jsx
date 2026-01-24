@@ -3,26 +3,24 @@ import { MessageCircle, Instagram, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-12 md:py-16 bg-gradient-to-br from-[#2B243F] to-[#7662B2] text-white">
-      <div className="container-custom px-6 md:px-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+    <section id="contact" className="py-10 md:py-14 bg-gradient-to-br from-[#2B243F] to-[#7662B2] text-white">
+      <div className="container-custom px-4 md:px-6">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Order Custom Cakes & Desserts
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-base text-white/90 max-w-2xl mx-auto">
             Share your occasion, servings, flavour and delivery date - we'll make it perfect!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Left - Quick Contact */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold mb-5" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Get in Touch
-              </h3>
+          <div className="space-y-5">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20">
+              <h3 className="text-lg font-bold mb-4">Get in Touch</h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* WhatsApp */}
                 <a
                   href="https://wa.me/919266987600"
@@ -81,10 +79,8 @@ const Contact = () => {
           </div>
 
           {/* Right - What to Share */}
-          <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] rounded-xl p-6 text-[#2B243F]">
-            <h3 className="text-xl font-bold mb-5" style={{ fontFamily: 'Playfair Display, serif' }}>
-              What to Share When Ordering
-            </h3>
+          <div className="bg-gradient-to-br from-[#E1CAFF] to-[#C0C2FD] rounded-xl p-5 text-[#2B243F]">
+            <h3 className="text-lg font-bold mb-4">What to Share When Ordering</h3>
 
             <div className="space-y-3">
               {[
@@ -101,7 +97,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-6 p-3 bg-[#7662B2]/20 rounded-lg border-2 border-dashed border-[#7662B2]">
+            <div className="mt-5 p-3 bg-[#7662B2]/20 rounded-lg border-2 border-dashed border-[#7662B2]">
               <p className="text-center font-semibold text-sm">
                 Don't worry if you're unsure! Our team will guide you through every detail. 💜
               </p>
@@ -111,7 +107,7 @@ const Contact = () => {
               href="https://wa.me/919266987600"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 bg-[#2B243F] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1a1429] transition-all duration-300 hover:scale-105 active:scale-95 w-full text-center block text-sm"
+              className="mt-4 bg-[#2B243F] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1a1429] transition-all duration-300 hover:scale-105 active:scale-95 w-full text-center block text-sm"
             >
               Start Your Order Now
             </a>
