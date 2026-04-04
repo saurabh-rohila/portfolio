@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 const Header = () => {
@@ -20,7 +20,6 @@ const Header = () => {
   const menuItems = [
     { label: 'Home', path: '/' },
     { label: 'Menu & Order', path: '/menu' },
-    { label: 'Instagram', href: 'https://www.instagram.com/gooeymooey.in/', external: true },
     { label: 'Contact', path: '/', hash: '#contact' },
   ];
 
@@ -90,7 +89,6 @@ const Header = () => {
                   }`}
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
-                  {item.label === 'Instagram' && <Instagram className="w-4 h-4 inline mr-1" />}
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7662B2] transition-all duration-300 group-hover:w-full"></span>
                 </button>
