@@ -78,33 +78,34 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {menuItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavigation(item)}
-                className={`font-semibold text-base transition-colors duration-300 relative group ${
-                  isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
-                }`}
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
-                {item.label === 'Instagram' && <Instagram className="w-4 h-4 inline mr-1" />}
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7662B2] transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-          </nav>
+          {/* Desktop Navigation + CTA */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+            <nav className="flex items-center gap-6 xl:gap-8">
+              {menuItems.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavigation(item)}
+                  className={`font-semibold text-base transition-colors duration-300 relative group whitespace-nowrap ${
+                    isActive(item.path) ? 'text-[#7662B2]' : 'text-[#2B243F] hover:text-[#7662B2]'
+                  }`}
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {item.label === 'Instagram' && <Instagram className="w-4 h-4 inline mr-1" />}
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7662B2] transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              ))}
+            </nav>
 
-          {/* Desktop CTA Button */}
-          <a
-            href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden lg:flex items-center btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
-          >
-            Order on WhatsApp
-          </a>
+            <a
+              href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
+            >
+              Order on WhatsApp
+            </a>
+          </div>
 
           {/* Mobile Menu Toggle */}
           <button
