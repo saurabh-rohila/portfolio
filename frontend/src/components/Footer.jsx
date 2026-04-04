@@ -57,7 +57,7 @@ const Footer = () => {
               
               {/* WhatsApp - Original green */}
               <a
-                href="https://wa.me/919266987600"
+                href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] p-2.5 rounded-lg hover:scale-110 transition-transform flex items-center justify-center"
@@ -96,7 +96,7 @@ const Footer = () => {
               <ul className="space-y-1 text-[#2B243F]/70 text-xs">
                 <li>
                   <span className="block font-semibold text-[#2B243F] mb-0.5">WhatsApp</span>
-                  <a href="https://wa.me/919266987600" className="hover:text-[#7662B2] transition-colors">
+                  <a href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82" className="hover:text-[#7662B2] transition-colors">
                     +91 92669 87600
                   </a>
                 </li>

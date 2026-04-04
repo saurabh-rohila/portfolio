@@ -47,7 +47,7 @@ const Hero = () => {
             {/* CTA Buttons - Centered */}
             <div className="flex flex-col sm:flex-row gap-2 pt-2 justify-center">
               <a
-                href="https://wa.me/919266987600"
+                href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] text-white px-4 py-2 rounded-full font-bold transition-all duration-300 hover:bg-[#1da851] hover:shadow-lg hover:scale-105 active:scale-95 inline-flex items-center justify-center space-x-2 text-sm"

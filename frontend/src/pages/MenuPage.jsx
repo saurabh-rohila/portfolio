@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +8,13 @@ import {
 import { MessageCircle } from 'lucide-react';
 
 const MenuPage = () => {
+  useEffect(() => {
+    document.title = 'Menu & Prices | Gooey Mooey - Custom Cakes & Desserts';
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute('content', 'Explore Gooey Mooey\'s full menu with prices. Custom cakes, bento cakes, cupcakes, cookies, brownies and cheesecake jars. Order on WhatsApp for delivery in Gurugram.');
+    }
+  }, []);
   const menuData = [
     {
       category: 'Cakes',
@@ -82,7 +89,7 @@ const MenuPage = () => {
             Custom flavours, designs & packaging available.
           </p>
           <a
-            href="https://wa.me/919266987600"
+            href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#25D366] text-white px-5 py-2.5 rounded-full font-bold transition-all duration-300 hover:bg-[#1da851] hover:shadow-lg hover:scale-105 active:scale-95 inline-flex items-center space-x-2 text-sm"
@@ -150,7 +157,7 @@ const MenuPage = () => {
               Not sure what to choose? Chat with us & we'll suggest the perfect dessert.
             </p>
             <a
-              href="https://wa.me/919266987600"
+              href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#7662B2] px-5 py-2.5 rounded-full font-semibold hover:bg-[#E1CAFF] transition-all duration-300 flex items-center space-x-2 flex-shrink-0 text-sm"

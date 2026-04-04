@@ -16,7 +16,7 @@ const MobileBottomBar = () => {
 
         {/* WhatsApp Order */}
         <a
-          href="https://wa.me/919266987600"
+          href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center space-x-2 py-4 bg-[#25D366] text-white hover:bg-[#1ea952] transition-colors"
