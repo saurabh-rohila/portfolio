@@ -8,7 +8,7 @@ const FeaturedPreview = () => {
   const products = [
     { name: 'Celebration Cakes', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/vukwd16d_WhatsApp%20Image%202026-01-24%20at%208.45.31%20PM.jpeg' },
     { name: 'Bento Cakes', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/xdkmg9n2_WhatsApp%20Image%202026-01-24%20at%208.48.18%20PM.jpeg' },
-    { name: 'Cupcakes', image: null },
+    { name: 'Cupcakes', image: 'https://customer-assets.emergentagent.com/job_6deaac8b-d2d0-442b-830c-f76af32be6f0/artifacts/0r7eeqhg_images.jpg' },
     { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
     { name: 'Dessert Jars', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/ulipb3gm_WhatsApp%20Image%202026-01-24%20at%208.51.24%20PM.jpeg' },
     { name: 'Cheesecake', image: 'https://customer-assets.emergentagent.com/job_6deaac8b-d2d0-442b-830c-f76af32be6f0/artifacts/jefnds4x_PVP11372%201x1.jpg' },
