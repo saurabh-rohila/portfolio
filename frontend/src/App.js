@@ -10,8 +10,6 @@ import MenuPage from './pages/MenuPage';
 
 function App() {
   useEffect(() => {
-    document.title = 'Gooey Mooey | Premium Cakes & Desserts in Gurugram';
-
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
