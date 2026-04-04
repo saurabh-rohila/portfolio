@@ -11,7 +11,7 @@ const FeaturedPreview = () => {
     { name: 'Cupcakes', image: null },
     { name: 'Cookies', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/qiefmeno_PVP11594.jpg' },
     { name: 'Dessert Jars', image: 'https://customer-assets.emergentagent.com/job_bakery-delight-140/artifacts/ulipb3gm_WhatsApp%20Image%202026-01-24%20at%208.51.24%20PM.jpeg' },
-    { name: 'Cheesecake', image: null },
+    { name: 'Cheesecake', image: 'https://customer-assets.emergentagent.com/job_6deaac8b-d2d0-442b-830c-f76af32be6f0/artifacts/jefnds4x_PVP11372%201x1.jpg' },
   ];
 
   return (
