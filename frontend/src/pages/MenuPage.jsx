@@ -1,80 +1,22 @@
 import React, { useEffect } from 'react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '../components/ui/accordion';
 import { MessageCircle } from 'lucide-react';
 
 const MenuPage = () => {
   useEffect(() => {
-    document.title = 'Menu & Prices | Gooey Mooey - Custom Cakes & Desserts';
+    document.title = 'Menu | Gooey Mooey - Custom Cakes & Desserts';
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute('content', 'Explore Gooey Mooey\'s full menu with prices. Custom cakes, bento cakes, cupcakes, cookies, brownies and cheesecake jars. Order on WhatsApp for delivery in Gurugram.');
+      meta.setAttribute('content', 'Explore Gooey Mooey\'s menu. Custom cakes, bento cakes, cupcakes, cookies, brownies and cheesecake jars. Order on WhatsApp for delivery in Gurugram.');
     }
   }, []);
-  const menuData = [
-    {
-      category: 'Cakes',
-      items: [
-        { name: 'Chocolate Truffle', price: '₹899+' },
-        { name: 'Red Velvet Cream Cheese', price: '₹999+' },
-        { name: 'Butterscotch Crunch', price: '₹849+' },
-        { name: 'Fresh Fruit Cream', price: '₹899+' },
-      ],
-    },
-    {
-      category: 'Bento Cakes',
-      items: [
-        { name: 'Chocolate Fudge', price: null },
-        { name: 'Vanilla Berry', price: null },
-        { name: 'Red Velvet', price: null },
-        { name: 'Coffee Caramel', price: null },
-      ],
-      categoryPrice: '₹499+',
-    },
-    {
-      category: 'Cupcakes',
-      items: [
-        { name: 'Chocolate Overload', price: null },
-        { name: 'Red Velvet', price: null },
-        { name: 'Vanilla Sprinkle', price: null },
-        { name: 'Nutella Filled', price: null },
-      ],
-      categoryPrice: '₹129+',
-    },
-    {
-      category: 'Cookies',
-      items: [
-        { name: 'Chocolate Chip', price: null },
-        { name: 'Royal Icing Theme Cookies', price: null },
-        { name: 'Oatmeal Almond', price: null },
-        { name: 'Double Chocolate', price: null },
-      ],
-      categoryPrice: '₹299+',
-    },
-    {
-      category: 'Brownies',
-      items: [
-        { name: 'Fudgy Chocolate', price: null },
-        { name: 'Walnut', price: null },
-        { name: 'Lotus Biscoff', price: null },
-        { name: 'Nutella Bars', price: null },
-      ],
-      categoryPrice: '₹349+',
-    },
-    {
-      category: 'Cheesecake Jars',
-      items: [
-        { name: 'Blueberry', price: null },
-        { name: 'Lotus Biscoff', price: null },
-        { name: 'Oreo', price: null },
-        { name: 'Tiramisu', price: null },
-      ],
-      categoryPrice: '₹249+',
-    },
+
+  const categories = [
+    'Cakes',
+    'Bento Cakes',
+    'Cupcakes',
+    'Cookies',
+    'Brownies',
+    'Cheesecake Jars',
   ];
 
   return (
@@ -102,42 +44,27 @@ const MenuPage = () => {
         </div>
       </section>
 
-      {/* Menu Sections */}
+      {/* Menu Categories */}
       <section className="py-10 md:py-14 bg-white">
         <div className="container-custom px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-3">
-              {menuData.map((section, index) => (
-                <AccordionItem
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              {categories.map((category, index) => (
+                <a
                   key={index}
-                  value={`item-${index}`}
-                  className="bg-gradient-to-r from-[#E1CAFF]/20 to-[#C0C2FD]/20 rounded-xl border border-[#E1CAFF] overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                  href="https://wa.me/919266987600?text=Hi!%20I%27d%20like%20to%20place%20an%20order%20from%20Gooey%20Mooey%20%F0%9F%8E%82"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-[#E1CAFF]/20 to-[#C0C2FD]/20 rounded-xl border border-[#E1CAFF] px-5 py-5 text-center shadow-md hover:shadow-lg hover:bg-white/80 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
                 >
-                  <AccordionTrigger className="px-5 py-4 hover:no-underline hover:bg-white/50 transition-colors">
-                    <div className="flex items-center justify-between w-full pr-4">
-                      <span className="text-xl font-bold text-[#2B243F]">
-                        {section.category}
-                      </span>
-                      {section.categoryPrice && (
-                        <span className="text-sm font-semibold text-[#7662B2]">{section.categoryPrice}</span>
-                      )}
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-5 pb-3 pt-2">
-                    <div className="space-y-2">
-                      {section.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex justify-between items-center py-2 border-b border-[#E1CAFF]/50 last:border-0">
-                          <span className="text-[#2B243F] font-medium text-sm">{item.name}</span>
-                          {item.price && <span className="text-[#7662B2] font-semibold text-sm">{item.price}</span>}
-                        </div>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+                  <span className="text-lg md:text-xl font-bold text-[#2B243F]">
+                    {category}
+                  </span>
+                </a>
               ))}
-            </Accordion>
+            </div>
 
-            <div className="text-center mt-8 space-y-5">
+            <div className="text-center mt-8">
               <div className="bg-gradient-to-r from-[#E1CAFF]/30 to-[#C0C2FD]/30 rounded-xl p-5 border-2 border-dashed border-[#7662B2]">
                 <p className="text-[#7662B2] font-semibold text-base mb-1">
                   Note: Flavours, designs and packaging can be customized.
@@ -149,7 +76,7 @@ const MenuPage = () => {
         </div>
       </section>
 
-      {/* Quick Order Strip - Sticky on scroll */}
+      {/* Quick Order Strip */}
       <section className="sticky bottom-0 bg-gradient-to-r from-[#7662B2] to-[#FF859F] py-3 shadow-lg z-40 hidden md:block">
         <div className="container-custom px-4 md:px-6">
           <div className="flex items-center justify-between">
